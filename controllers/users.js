@@ -15,7 +15,7 @@ module.exports.register = async (req, res, next) => {
             req.flash('success', 'Welcome to FlexHub!');
             res.redirect('/hubs');
         })
-        res.send('successfully registered')
+    
     } catch (e) {
         req.flash('error', e.message);
         res.redirect('register');
